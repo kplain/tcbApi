@@ -31,7 +31,8 @@
         <property name="mwsProjectsDir" location="${mwsProjects}"/>
         <property name="rulesProjectsDir" location="${rulesProjects}"/>
         <property name="umProjectsDir" location="${umExport}"/>
-        
+	<property name="apiGatewayDir" location="${apiGateway}"/>
+	
         <property name="buildOutputDir" value="${workspace.dir}/target/${projectName}/build"/>
         <property name="repositoryName" value="${projectName}Repo"/>
         <property name="testPackageNamePattern" value="*_Test"/>
