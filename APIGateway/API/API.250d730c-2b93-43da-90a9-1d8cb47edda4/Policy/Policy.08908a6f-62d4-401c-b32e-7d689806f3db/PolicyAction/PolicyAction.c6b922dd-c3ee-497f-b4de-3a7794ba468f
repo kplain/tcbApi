@@ -1,0 +1,16 @@
+{
+  "id" : "c6b922dd-c3ee-497f-b4de-3a7794ba468f",
+  "names" : [ {
+    "value" : "Conditional Error Processing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "conditionalErrorProcessing",
+  "parameters" : [ {
+    "templateKey" : "customFailureMessages",
+    "parameters" : [ {
+      "templateKey" : "sendNativeProviderFault",
+      "values" : [ "true" ]
+    } ]
+  } ],
+  "active" : false
+}

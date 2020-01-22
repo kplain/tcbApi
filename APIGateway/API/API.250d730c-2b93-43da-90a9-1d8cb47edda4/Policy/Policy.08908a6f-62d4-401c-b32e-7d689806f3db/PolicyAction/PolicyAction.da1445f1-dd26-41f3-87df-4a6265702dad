@@ -1,0 +1,22 @@
+{
+  "id" : "da1445f1-dd26-41f3-87df-4a6265702dad",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "${ESBURL}/restv2/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  }, {
+    "templateKey" : "connectTimeout",
+    "values" : [ "240" ]
+  }, {
+    "templateKey" : "readTimeout",
+    "values" : [ "240" ]
+  } ],
+  "active" : false
+}

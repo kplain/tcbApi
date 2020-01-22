@@ -1,0 +1,39 @@
+{
+  "id" : "08908a6f-62d4-401c-b32e-7d689806f3db",
+  "names" : [ {
+    "value" : "Default Policy for API SailPoint Staff Experience API",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "da1445f1-dd26-41f3-87df-4a6265702dad"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "6f9bce17-ba27-452e-bf80-6328e3382acf"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c6b922dd-c3ee-497f-b4de-3a7794ba468f"
+    } ],
+    "stageKey" : "responseFaultProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "91cef341-b75c-4c24-b941-55c9d01a8633"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}
