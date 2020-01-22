@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">TcbTransactions.topLevelServices.restServices:accountTransactions</value>
+  <value name="node_pkg">TcbTransactions</value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">accountTransactions</value>
+    <value name="nsName">TcbTransactions.topLevelServices.restServices:accountTransactions</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/summary</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getAccountSummaryByDate</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/credits</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getCreditTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/debits</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getDebitTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/deposits</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getDepositTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/lockboxes</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getLockboxTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/paidChecks</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getPaidChecks</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/achs</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getAchTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/wires</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getWireTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/wireDetail</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getWireTransactionDetail</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/wireDetailOffset</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getWireDetailOffset</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/miscDebits</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getMiscDebitTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/transfers</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getTransferTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/cashVaults</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getCashVaultTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/transactionTypes</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getTransactionTypes</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/rdcs</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getRdcTransactions</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/achDetail</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getAchTransactionDetail</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">accountTransactions/achDetailOffset</value>
+        <value name="serviceName">TcbTransactions.topLevelServices.restServices.services:getAchDetailOffset</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <value name="resourceName">accountTransactions</value>
+  <Boolean name="modifiable">true</Boolean>
+</Values>

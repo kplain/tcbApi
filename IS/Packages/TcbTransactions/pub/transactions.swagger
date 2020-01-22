@@ -1,0 +1,1788 @@
+---
+swagger: "2.0"
+info:
+  description: "API wrapper for EDP stored procedures that query client account balance and transactions."
+  version: "1.1"
+  title: "Financial Account Transactions"
+host: "gateway.texascapitalbank.com"
+basePath: "/restv2/financialAccount"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+securityDefinitions:
+  OauthSecurity:
+    type: oAuth2
+    flow: accessCode
+    authorizationUrl: 'https://rldiesbts2.tcbna.net:5443/invoke/pub.apigateway.oauth2/authorize'
+    tokenUrl: 'https://rldiesbts2.tcbna.net:5443/invoke/pub.apigateway.oauth2/getAccessToken'
+    scopes:
+      admin: Admin scope
+      user: User scope
+      media: Media scope
+security:
+- OauthSecurity:
+  - user
+paths:
+  /accountSummary:
+    get:
+      description: "Query account summary information."
+      operationId: "accountSummary"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumber"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify a single account number."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/accountSummaryResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /transactionTypes:
+    get:
+      description: "Query transaction type list."
+      operationId: "transactionTypes"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "reportName"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify report name."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/transactionTypesResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /rdcTransactions:
+    get:
+      description: "Query remote deposit capture transactions."
+      operationId: "rdcTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/rdcTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /creditTransactions:
+    get:
+      description: "Query credit transactions."
+      operationId: "creditTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "minCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum check number of transaction to include."
+      - name: "maxCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum check number of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/creditTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /debitTransactions:
+    get:
+      description: "Query debit transactions."
+      operationId: "debitTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "minCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum check number of transaction to include."
+      - name: "maxCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum check number of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/debitTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /depositTransactions:
+    get:
+      description: "Query deposit transactions."
+      operationId: "depositTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "minCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum check number of transaction to include."
+      - name: "maxCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum check number of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/depositTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /lockboxTransactions:
+    get:
+      description: "Query lockbox transactions."
+      operationId: "lockboxTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/lockboxTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /paidCheckTransactions:
+    get:
+      description: "Query paid check transactions."
+      operationId: "paidCheckTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "minCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum check number of transaction to include."
+      - name: "maxCheckNum"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum check number of transaction to include."
+#      - name: "includeCredits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#        description: "Specify if credit transactions should be included."
+#      - name: "includeDebits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#       description: "Specify if debit transactions should be included."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/paidCheckTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /achTransactions:
+    get:
+      description: "Query automated clearing house transactions."
+      operationId: "achTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+#      - name: "includeCredits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#        description: "Specify if credit transactions should be included."
+#      - name: "includeDebits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#       description: "Specify if debit transactions should be included."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/achTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /wireTransactions:
+    get:
+      description: "Query wire transactions."
+      operationId: "wireTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+#      - name: "includeCredits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#        description: "Specify if credit transactions should be included."
+#      - name: "includeDebits"
+#        in: "query"
+#        required: false
+#        type: "string"
+#       description: "Specify if debit transactions should be included."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/wireTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /wireTransactionDetail:
+    get:
+      description: "Query wire transaction detail."
+      operationId: "wireTransactionDetail"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "transactionId"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify transaction identifier."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/wireTransactionDetailResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /miscDebitTransactions:
+    get:
+      description: "Query miscellaneous debit transactions."
+      operationId: "miscDebitTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/miscDebitTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /transferTransactions:
+    get:
+      description: "Query account transfer transactions."
+      operationId: "transferTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/transferTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /cashVaultTransactions:
+    get:
+      description: "Query cash vault transactions."
+      operationId: "cashVaultTransactions"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "skip"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to skip from the beginning of the list."
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify the number of items to return in the list."
+      - name: "X-Correlation-ID"
+        in: "header"
+        type: "string"
+        description: "A value used to correlate all API usage."
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/cashVaultTransactionsResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /wireTransactionDetailOffset:
+    get:
+      description: "Query wire transactions with details offset."
+      operationId: "wireTransactionDetailOffset"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "includeCredits"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify if credit transactions should be included."
+      - name: "includeDebits"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify if debit transactions should be included."
+      - name: "transactionCategories"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify list of transaction categories to include.  Separate values with comma (,)."
+      - name: "X-Correlation-ID"
+        in: "query"
+        description: "A value used to correlate all API usage."
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/wireTransactionDetailOffsetResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /achTransactionDetail:
+    get:
+      description: "Query automated clearing house transaction details."
+      operationId: "achTransactionDetail"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "transactionId"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify transaction identifier."
+      - name: "X-Correlation-ID"
+        in: "query"
+        description: "A value used to correlate all API usage."
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/achTransactionDetailResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+  /achTransactionDetailOffset:
+    get:
+      description: "Query automated clearing house transactions with details offset."
+      operationId: "achTransactionDetailOffset"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "accountNumbers"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify one or more account numbers.  Separate each with a comma (,)."
+      - name: "startDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify first calendar date of transaction to include."
+      - name: "endDate"
+        in: "query"
+        required: true
+        type: "string"
+        description: "Specify last calendar date of transaction to include."
+      - name: "minAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify minimum transaction dollar amount of transaction to include."
+      - name: "maxAmount"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify maximum transaction dollar amount of transaction to include."
+      - name: "includeCredits"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify if credit transactions should be included."
+      - name: "includeDebits"
+        in: "query"
+        required: false
+        type: "string"
+        description: "Specify if debit transactions should be included."
+      - name: "X-Correlation-ID"
+        in: "query"
+        description: "A value used to correlate all API usage."
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/achTransactionDetailOffsetResponse"
+        400:
+          description: "Generic user request error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+        401:
+          description: "Access Denied"
+        500:
+          description: "Generic internal system error"
+          schema:
+            $ref: "#/definitions/errorResponse"
+definitions:
+  errorResponse:
+    properties:
+      error:
+        $ref: "#/definitions/errorType"
+  accountSummaryResponse:
+    properties:
+      summary:
+        $ref: "#/definitions/accountSummaryResponseType"
+  transferResponseType:
+    required:
+    - "accountNumber"
+    - "accountNumberCredited"
+    - "accountNumberDebited"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      accountNumberDebited:
+        type: "string"
+      baiCode:
+        type: "string"
+      accountNumberCredited:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  achResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "originatorName"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      originatorName:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  depositTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/depositResponseType"
+  errorType:
+    required:
+    - "message"
+    properties:
+      message:
+        type: "string"
+  transactionTypesResponse:
+    properties:
+      transactionTypes:
+        type: "array"
+        items:
+          $ref: "#/definitions/transactionTypeResponseType"
+  rdcTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/rdcResponseType"
+  wireTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/wireResponseType"
+  paidCheckTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/paidCheckResponseType"
+  transferTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/transferResponseType"
+  creditTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/creditResponseType"
+  debitResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      checkNumber:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  depositResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  cashVaultTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/cashVaultResponseType"
+  transactionTypeResponseType:
+    required:
+    - "transactionTypeCode"
+    - "transactionTypeDesc"
+    properties:
+      transactionTypeDesc:
+        type: "string"
+      transactionTypeCode:
+        type: "string"
+  lockboxResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  creditResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      checkNumber:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  lockboxTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/lockboxResponseType"
+  debitTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/debitResponseType"
+  wireTransactionDetailResponse:
+    properties:
+      transactionDetail:
+        $ref: "#/definitions/wireDetailResponseType"
+  cashVaultResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  miscDebitResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  wireDetailResponseType:
+    required:
+    - "bankReferenceNumber"
+    - "beneficiaryBankAddress1"
+    - "beneficiaryBankPartyName"
+    - "dateOfWire"
+    - "imad"
+    - "omad"
+    - "originator"
+    - "originatorAddress1"
+    - "originatorBankAddress1"
+    - "originatorBankAddress3"
+    - "originatorBankCode"
+    - "originatorBankPartyName"
+    - "referenceNumber"
+    properties:
+      intermediarBankAddress3:
+        type: "string"
+      intermediarBankAddress2:
+        type: "string"
+      intermediarBankAddress1:
+        type: "string"
+      originatorBankPartyName:
+        type: "string"
+      originator:
+        type: "string"
+      originatorBankAddress2:
+        type: "string"
+      originatorBankAddress3:
+        type: "string"
+      beneficiaryBankPartyName:
+        type: "string"
+      referenceNumber:
+        type: "string"
+      foreignOrDomesticWireIndicator:
+        type: "string"
+      originatorBankAddress1:
+        type: "string"
+      beneficiaryBankAddress3:
+        type: "string"
+      dateOfWire:
+        type: "string"
+      originatorAddress2:
+        type: "string"
+      instructingBankAddress1:
+        type: "string"
+      originatorAddress3:
+        type: "string"
+      beneficiaryBankAddress1:
+        type: "string"
+      instructingBankAddress3:
+        type: "string"
+      originatorAddress1:
+        type: "string"
+      beneficiaryBankAddress2:
+        type: "string"
+      instructingBankPartyName:
+        type: "string"
+      instructingBankAddress2:
+        type: "string"
+      originatorBankCode:
+        type: "string"
+      incomingOutgoingIndicator:
+        type: "string"
+      bankReferenceNumber:
+        type: "string"
+      omad:
+        type: "string"
+      imad:
+        type: "string"
+      swiftId:
+        type: "string"
+      intermediarBankCode:
+        type: "string"
+      remarks:
+        type: "string"
+  achTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/achResponseType"
+  rdcResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      ulId:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  accountSummaryResponseType:
+    required:
+    - "accountId"
+    - "accountNumber"
+    - "accountShortName"
+    - "accountType"
+    - "averageAvailableBalance"
+    - "closingAvailableBalance"
+    - "closingLedgerBalance"
+    - "endDate"
+    - "oneDayFloat"
+    - "openingAvailableBalance"
+    - "openingLedgerBalance"
+    - "startDate"
+    - "sweepBalance"
+    - "totalCreditAmount"
+    - "totalCredits"
+    - "totalDebitAmount"
+    - "totalDebits"
+    - "twoOrMoreDaysFloat"
+    properties:
+      closingAvailableBalance:
+        type: "string"
+      accountShortName:
+        type: "string"
+      openingLedgerBalance:
+        type: "string"
+      endDate:
+        type: "string"
+      accountType:
+        type: "string"
+      twoOrMoreDaysFloat:
+        type: "string"
+      sweepBalance:
+        type: "string"
+      totalDebitAmount:
+        type: "string"
+      accountNumber:
+        type: "string"
+      oneDayFloat:
+        type: "string"
+      averageAvailableBalance:
+        type: "string"
+      accountId:
+        type: "string"
+      totalCredits:
+        type: "string"
+      totalCreditAmount:
+        type: "string"
+      closingLedgerBalance:
+        type: "string"
+      openingAvailableBalance:
+        type: "string"
+      totalDebits:
+        type: "string"
+      startDate:
+        type: "string"
+  achDetailOffsetResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "bankReferenceNumber"
+    - "description"
+    - "descriptor"
+    - "destinationCurrencyCode"
+    - "fedReferenceNumber"
+    - "internationalAchIndicator"
+    - "offsetAccountNumber"
+    - "offsetAmount"
+    - "offsetName"
+    - "originatorCurrencyCode"
+    - "originatorName"
+    - "secCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      originatorName:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      originatorCurrencyCode:
+        type: "string"
+      offsetAmount:
+        type: "string"
+      baiCode:
+        type: "string"
+      secCode:
+        type: "string"
+      description:
+        type: "string"
+      descriptor:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      transactionId:
+        type: "string"
+      bankReferenceNumber:
+        type: "string"
+      udsTransactionCategory:
+        type: "string"
+      destinationCurrencyCode:
+        type: "string"
+      internationalAchIndicator:
+        type: "string"
+      creditAmount:
+        type: "string"
+      fedReferenceNumber:
+        type: "string"
+      offsetAccountNumber:
+        type: "string"
+      offsetName:
+        type: "string"
+  paidCheckResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      checkNumber:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  miscDebitTransactionsResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/miscDebitResponseType"
+  achTransactionDetailOffsetResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/achDetailOffsetResponseType"
+  wireResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "beneficiaryName"
+    - "originatorName"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      udsTransactionCategory:
+        type: "string"
+      originatorName:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      beneficiaryName:
+        type: "string"
+      baiCode:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      creditAmount:
+        type: "string"
+      transactionId:
+        type: "string"
+  wireDetailOffsetResponseType:
+    required:
+    - "accountNumber"
+    - "baiCode"
+    - "bankReferenceNumber"
+    - "beneficiaryBankAddress1"
+    - "beneficiaryBankPartyName"
+    - "beneficiaryName"
+    - "dateOfWire"
+    - "imad"
+    - "omad"
+    - "originator"
+    - "originatorAddress1"
+    - "originatorBankAddress1"
+    - "originatorBankAddress3"
+    - "originatorBankCode"
+    - "originatorBankPartyName"
+    - "originatorName"
+    - "referenceNumber"
+    - "transactionDate"
+    - "transactionId"
+    - "transactionTypeDesc"
+    - "udsTransactionCategory"
+    properties:
+      originatorName:
+        type: "string"
+      intermediarBankAddress3:
+        type: "string"
+      intermediarBankAddress2:
+        type: "string"
+      intermediarBankAddress1:
+        type: "string"
+      originatorBankPartyName:
+        type: "string"
+      baiCode:
+        type: "string"
+      originator:
+        type: "string"
+      originatorBankAddress2:
+        type: "string"
+      originatorBankAddress3:
+        type: "string"
+      beneficiaryBankPartyName:
+        type: "string"
+      referenceNumber:
+        type: "string"
+      beneficiaryName:
+        type: "string"
+      foreignOrDomesticWireIndicator:
+        type: "string"
+      originatorBankAddress1:
+        type: "string"
+      beneficiaryBankAddress3:
+        type: "string"
+      dateOfWire:
+        type: "string"
+      transactionTypeDesc:
+        type: "string"
+      originatorAddress2:
+        type: "string"
+      instructingBankAddress1:
+        type: "string"
+      originatorAddress3:
+        type: "string"
+      beneficiaryBankAddress1:
+        type: "string"
+      instructingBankAddress3:
+        type: "string"
+      originatorAddress1:
+        type: "string"
+      beneficiaryBankAddress2:
+        type: "string"
+      instructingBankPartyName:
+        type: "string"
+      instructingBankAddress2:
+        type: "string"
+      debitAmount:
+        type: "string"
+      transactionDate:
+        type: "string"
+      accountNumber:
+        type: "string"
+      transactionId:
+        type: "string"
+      originatorBankCode:
+        type: "string"
+      udsTransactionCategory:
+        type: "string"
+      incomingOutgoingIndicator:
+        type: "string"
+      bankReferenceNumber:
+        type: "string"
+      omad:
+        type: "string"
+      imad:
+        type: "string"
+      swiftId:
+        type: "string"
+      creditAmount:
+        type: "string"
+      intermediarBankCode:
+        type: "string"
+      remarks:
+        type: "string"
+  wireTransactionDetailOffsetResponse:
+    properties:
+      transactions:
+        type: "array"
+        items:
+          $ref: "#/definitions/wireDetailOffsetResponseType"
+  
