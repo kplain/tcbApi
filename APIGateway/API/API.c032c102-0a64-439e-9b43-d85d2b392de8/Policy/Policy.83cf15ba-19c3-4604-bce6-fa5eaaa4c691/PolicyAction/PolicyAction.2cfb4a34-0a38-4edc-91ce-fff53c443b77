@@ -1,0 +1,16 @@
+{
+  "id" : "2cfb4a34-0a38-4edc-91ce-fff53c443b77",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "${ESBURL}/gateway/FinancialAccountTransactions/1.1/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}
