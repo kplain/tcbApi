@@ -47,6 +47,10 @@
 		<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="build" inheritAll="true"/>
 	</target>
 
+	<target name="package" depends="">
+		<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="package" inheritAll="true"/>
+	</target>
+
 	<target name="deploy" depends="">
 		<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="deploy" inheritAll="true"/>
 	</target>
