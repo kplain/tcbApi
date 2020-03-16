@@ -32,6 +32,7 @@
 	<property name="rulesProjectsDir" location="${rulesProjects}"/>
 	<property name="umProjectsDir" location="${umExport}"/>
 	<property name="apiGatewayDir" location="${apiGateway}"/>
+	<property name="tnGatewayDir" location="${tnGateway}"/>
 
 	<property name="buildOutputDir" value="${workspace.dir}/target/${projectName}/build"/>
 	<property name="repositoryName" value="${projectName}Repo"/>
