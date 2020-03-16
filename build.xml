@@ -18,7 +18,7 @@
    limitations under the License.                                                            
 -->
 
-<project name="testBuild" default="buildDeployTest" basedir="." >
+<project name="testBuild" default="buildPackageDeploy" basedir="." >
 	<!-- project.properties -->
 	<property file="project.properties"/>
 
@@ -41,6 +41,10 @@
 
 	<target name="buildDeployTest" depends="">
 		<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="buildDeployTest" inheritAll="true"/>
+	</target>
+
+	<target name="buildPackageDeploy" depends="">
+		<ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" target="buildPackageDeploy" inheritAll="true"/>
 	</target>
 
 	<target name="build" depends="">
