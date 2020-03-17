@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">9</value>
+      <value name="minor">0</value>
+    </record>
+    <record name="types" javaclass="com.wm.data.ISMemDataImpl">
+      <idatacodable name="540qna00e1fq47is00000027" javaclass="com.wm.app.tn.doc.FFDocType">
+        <value name="TypeID">540qna00e1fq47is00000027</value>
+        <value name="TypeName">Batch Wire API</value>
+        <value name="TypeDescription"></value>
+        <idatacodable name="Deleted" javaclass="com.wm.data.MBoolean">          <value name="MBoolean">false</value>
+        </idatacodable>
+        <idatacodable name="Hidden" javaclass="com.wm.data.MBoolean">          <value name="MBoolean">false</value>
+        </idatacodable>
+        <idatacodable name="SenderFromSession" javaclass="com.wm.data.MBoolean">          <value name="MBoolean">false</value>
+        </idatacodable>
+        <value name="LastModified">2020-02-20 10:15:28.787</value>
+        <value name="ValidationSvc">wm.tn.doc.ff:validate</value>
+        <record name="PreProcessingFlags" javaclass="com.wm.app.tn.route.PreRoutingFlags">
+          <value name="verify?">no</value>
+          <value name="validate?">no</value>
+          <value name="persist?">yes</value>
+          <value name="unique?">Document ID, sender and document type</value>
+          <value name="persistOption?">content, attributes and activity log</value>
+          <null name="dupCheckSvc"/>
+        </record>
+        <null name="Attributes"/>
+        <record name="RequiredAttributes" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="SenderID">true</value>
+          <value name="ReceiverID">true</value>
+          <value name="DocumentID">true</value>
+          <value name="UserStatus">false</value>
+        </record>
+        <null name="PipelineMatchIData"/>
+        <idatacodable name="Routing" javaclass="com.wm.data.MBoolean">          <value name="MBoolean">true</value>
+        </idatacodable>
+        <idatacodable name="BAMMonitorableDoctype" javaclass="com.wm.data.MBoolean">          <value name="MBoolean">false</value>
+        </idatacodable>
+        <null name="BAMMonitoringAttributes"/>
+        <null name="BAMEventMap"/>
+        <null name="BAMAction"/>
+        <null name="BAMEventMapName"/>
+        <null name="SubDocTypeID"/>
+        <null name="BAMAttrListEventOption"/>
+        <null name="BAMDocTypeMapping"/>
+        <null name="BAMDocTypeDependency"/>
+        <value name="Type">2</value>
+        <null name="ParsingSchema"/>
+        <null name="ValidationInputs"/>
+        <record name="SystemAttributes" javaclass="com.wm.data.ISMemDataImpl">
+          <idatacodable name="SenderID" javaclass="com.wm.app.tn.doc.BizDocAttributeTransform">
+            <value name="function">10</value>
+            <null name="svc"/>
+            <array name="args" type="value" depth="1">
+              <value>95</value>
+            </array>
+            <value name="preFunction">-1</value>
+            <array name="preFnArgs" type="value" depth="1">
+              <null/>
+            </array>
+            <record name="attrib" javaclass="com.wm.app.tn.doc.BizDocAttribute">
+              <value name="AttributeID">SenderID</value>
+              <value name="AttributeName">SenderID</value>
+              <null name="AttributeDescription"/>
+              <value name="AttributeType">STRING</value>
+              <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+              <idatacodable name="Persist?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">true</value>
+              </idatacodable>
+              <null name="LastModifiedTime"/>
+              <value name="VERSION_NO">10.1.0.0</value>
+              <idatacodable name="System?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+            </record>
+            <null name="IDTypeName"/>
+            <value name="VERSION_NO">10.1.0.0</value>
+          </idatacodable>
+          <idatacodable name="ReceiverID" javaclass="com.wm.app.tn.doc.BizDocAttributeTransform">
+            <value name="function">10</value>
+            <null name="svc"/>
+            <array name="args" type="value" depth="1">
+              <value>95</value>
+            </array>
+            <value name="preFunction">-1</value>
+            <array name="preFnArgs" type="value" depth="1">
+              <null/>
+            </array>
+            <record name="attrib" javaclass="com.wm.app.tn.doc.BizDocAttribute">
+              <value name="AttributeID">ReceiverID</value>
+              <value name="AttributeName">ReceiverID</value>
+              <null name="AttributeDescription"/>
+              <value name="AttributeType">STRING</value>
+              <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+              <idatacodable name="Persist?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">true</value>
+              </idatacodable>
+              <null name="LastModifiedTime"/>
+              <value name="VERSION_NO">10.1.0.0</value>
+              <idatacodable name="System?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+            </record>
+            <null name="IDTypeName"/>
+            <value name="VERSION_NO">10.1.0.0</value>
+          </idatacodable>
+          <idatacodable name="DocumentID" javaclass="com.wm.app.tn.doc.BizDocAttributeTransform">
+            <value name="function">-1</value>
+            <null name="svc"/>
+            <array name="args" type="value" depth="1">
+              <value></value>
+            </array>
+            <value name="preFunction">-1</value>
+            <array name="preFnArgs" type="value" depth="1">
+              <null/>
+            </array>
+            <record name="attrib" javaclass="com.wm.app.tn.doc.BizDocAttribute">
+              <value name="AttributeID">DocumentID</value>
+              <value name="AttributeName">DocumentID</value>
+              <null name="AttributeDescription"/>
+              <value name="AttributeType">STRING</value>
+              <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+              <idatacodable name="Persist?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">true</value>
+              </idatacodable>
+              <null name="LastModifiedTime"/>
+              <value name="VERSION_NO">10.1.0.0</value>
+              <idatacodable name="System?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+            </record>
+            <null name="IDTypeName"/>
+            <value name="VERSION_NO">10.1.0.0</value>
+          </idatacodable>
+          <idatacodable name="UserStatus" javaclass="com.wm.app.tn.doc.BizDocAttributeTransform">
+            <value name="function">-1</value>
+            <null name="svc"/>
+            <array name="args" type="value" depth="1">
+              <value></value>
+            </array>
+            <value name="preFunction">-1</value>
+            <array name="preFnArgs" type="value" depth="1">
+              <null/>
+            </array>
+            <record name="attrib" javaclass="com.wm.app.tn.doc.BizDocAttribute">
+              <value name="AttributeID">UserStatus</value>
+              <value name="AttributeName">UserStatus</value>
+              <null name="AttributeDescription"/>
+              <value name="AttributeType">STRING</value>
+              <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+              <idatacodable name="Persist?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">true</value>
+              </idatacodable>
+              <null name="LastModifiedTime"/>
+              <value name="VERSION_NO">10.1.0.0</value>
+              <idatacodable name="System?" javaclass="com.wm.data.MBoolean">                <value name="MBoolean">false</value>
+              </idatacodable>
+            </record>
+            <null name="IDTypeName"/>
+            <value name="VERSION_NO">10.1.0.0</value>
+          </idatacodable>
+        </record>
+        <value name="VERSION_NO">10.1.0.0</value>
+      </idatacodable>
+    </record>
+  </record>
+</IDataXMLCoder>

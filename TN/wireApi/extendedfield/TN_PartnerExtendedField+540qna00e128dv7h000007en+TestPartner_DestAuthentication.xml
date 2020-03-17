@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">9</value>
+      <value name="minor">0</value>
+    </record>
+    <list name="extflds">
+      <record javaclass="com.wm.app.tn.profile.ExtendedProfileField">
+        <value name="PartnerID">540qnc00caln12qv0000005b</value>
+        <byte name="Value">
+ew0KICAic3dhZ2dlciIgOiAiMi4wIiwNCiAgImluZm8iIDogew0KICAgICJkZXNjcmlwdGlvbiIgOiAiTW9uZXkgbW92ZW1lbnQgQVBJIGJhc2VkIGFyb3VuZCBmZWRlcmFsIHdpcmUgdHJhbnNmZXJzLiIsDQogICAgInZlcnNpb24iIDogIjEuMCIsDQogICAgInRpdGxlIiA6ICJXaXJlVHJhbnNmZXIiDQogIH0sDQogICJwYXRocyIgOiB7DQogICAgIi9vdXRib3VuZCIgOiB7DQogICAgICAicG9zdCIgOiB7DQogICAgICAgICJwYXJhbWV0ZXJzIiA6IFsgXSwNCiAgICAgICAgInJlc3BvbnNlcyIgOiB7DQogICAgICAgICAgIjIwMiIgOiB7DQogICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIlN1Y2Nlc3NmdWwiLA0KICAgICAgICAgICAgImV4YW1wbGVzIiA6IHsNCiAgICAgICAgICAgICAgImFwcGxpY2F0aW9uL2pzb24iIDogIntcbiAgICBcIm1lc3NhZ2VcIjogXCJZb3VyIHdpcmUgcmVxdWVzdCBpcyBiZWluZyBwcm9jZXNzZWQuXCIsXG4gICAgXCJocmVmXCI6IFwiaHR0cHM6Ly9nYXRld2F5LnRleGFzY2FwaXRhbGJhbmsuY29tL3dpcmVUcmFuc2Zlci8xMDEwMTAxMDEwXCJcbn0iDQogICAgICAgICAgICB9DQogICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICB9DQogICAgfQ0KICB9LA0KICAiZGVmaW5pdGlvbnMiIDogew0KICAgICJhZGRyZXNzVHlwZSIgOiB7DQogICAgICAidHlwZSIgOiAib2JqZWN0IiwNCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsNCiAgICAgICAgImFkZHJlc3NUeXBlIiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAib2JqZWN0IiwNCiAgICAgICAgICAicHJvcGVydGllcyIgOiB7DQogICAgICAgICAgICAiY291bnRyeSIgOiB7DQogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciDQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgImFkZHJlc3MyIiA6IHsNCiAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICAiY2l0eSIgOiB7DQogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciDQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgImFkZHJlc3MxIiA6IHsNCiAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICAicG9zdGFsQ29kZSIgOiB7DQogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciDQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgInN0YXRlIiA6IHsNCiAgICAgICAgICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICAgICAgICAgIH0NCiAgICAgICAgICB9LA0KICAgICAgICAgICJyZXF1aXJlZCIgOiBbICJhZGRyZXNzMSIsICJjaXR5IiwgInBvc3RhbENvZGUiIF0NCiAgICAgICAgfQ0KICAgICAgfQ0KICAgIH0sDQogICAgImJhbmtUeXBlIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLA0KICAgICAgInJlcXVpcmVkIiA6IFsgImJhbmtUeXBlIiBdLA0KICAgICAgInByb3BlcnRpZXMiIDogew0KICAgICAgICAiYmFua1R5cGUiIDogew0KICAgICAgICAgICJ0eXBlIiA6ICJvYmplY3QiLA0KICAgICAgICAgICJwcm9wZXJ0aWVzIiA6IHsNCiAgICAgICAgICAgICJyb3V0aW5nTnVtYmVyIiA6IHsNCiAgICAgICAgICAgICAgInR5cGUiIDogImludGVnZXIiLA0KICAgICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIkJhbmsgUm91dGluZyBOdW1iZXIgb3IgU1dJRlQvQklDIg0KICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICJhZGRyZXNzIiA6IHsNCiAgICAgICAgICAgICAgIiRyZWYiIDogIiMvZGVmaW5pdGlvbnMvYWRkcmVzc1R5cGUiDQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgIm5hbWUiIDogew0KICAgICAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIiwNCiAgICAgICAgICAgICAgImRlc2NyaXB0aW9uIiA6ICJCYW5rIE5hbWUiDQogICAgICAgICAgICB9DQogICAgICAgICAgfSwNCiAgICAgICAgICAicmVxdWlyZWQiIDogWyAicm91dGluZ051bWJlciIgXQ0KICAgICAgICB9DQogICAgICB9DQogICAgfSwNCiAgICAib3V0Ym91bmRXaXJlVHlwZSIgOiB7DQogICAgICAidHlwZSIgOiAib2JqZWN0IiwNCiAgICAgICJyZXF1aXJlZCIgOiBbICJhbW91bnQiLCAiYmVuZWZpY2lhcnlCYW5rIiwgImJlbmVmaWNpYXJ5UGFydHkiLCAib3JpZ2luYXRpbmdCYW5rSW5mb3JtYXRpb24iLCAib3JpZ2luYXRpb25BY2NvdW50IiwgIm9yaWdpbmF0aW9uQWNjb3VudFR5cGUiLCAidHJhbnNhY3Rpb25TZXR0bGVtZW50RGF0ZSIgXSwNCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsNCiAgICAgICAgImFtb3VudCIgOiB7DQogICAgICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICAgICAgfSwNCiAgICAgICAgImN1cnJlbmN5Q29kZSIgOiB7DQogICAgICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICAgICAgfSwNCiAgICAgICAgInRyYW5zYWN0aW9uU2V0dGxlbWVudERhdGUiIDogew0KICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciDQogICAgICAgIH0sDQogICAgICAgICJvcmlnaW5hdGlvbkFjY291bnRUeXBlIiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIg0KICAgICAgICB9LA0KICAgICAgICAib3JpZ2luYXRpb25BY2NvdW50IiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAic3RyaW5nIg0KICAgICAgICB9LA0KICAgICAgICAib3JpZ2luYXRpbmdCYW5rSW5mb3JtYXRpb24iIDogew0KICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciDQogICAgICAgIH0sDQogICAgICAgICJiZW5lZmljaWFyeVBhcnR5IiA6IHsNCiAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9wYXJ0eVR5cGUiDQogICAgICAgIH0sDQogICAgICAgICJiZW5lZmljaWFyeUJhbmsiIDogew0KICAgICAgICAgICIkcmVmIiA6ICIjL2RlZmluaXRpb25zL2JhbmtUeXBlIg0KICAgICAgICB9DQogICAgICB9DQogICAgfSwNCiAgICAicGFydHlUeXBlIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJvYmplY3QiLA0KICAgICAgInJlcXVpcmVkIiA6IFsgInBhcnR5VHlwZSIgXSwNCiAgICAgICJwcm9wZXJ0aWVzIiA6IHsNCiAgICAgICAgInBhcnR5VHlwZSIgOiB7DQogICAgICAgICAgInR5cGUiIDogIm9iamVjdCIsDQogICAgICAgICAgInByb3BlcnRpZXMiIDogew0KICAgICAgICAgICAgImFkZHJlc3MiIDogew0KICAgICAgICAgICAgICAiJHJlZiIgOiAiIy9kZWZpbml0aW9ucy9hZGRyZXNzVHlwZSINCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICAibmFtZSIgOiB7DQogICAgICAgICAgICAgICJ0eXBlIiA6ICJzdHJpbmciLA0KICAgICAgICAgICAgICAiZGVzY3JpcHRpb24iIDogIk5hbWUiDQogICAgICAgICAgICB9LA0KICAgICAgICAgICAgImFjY291bnROdW1iZXIiIDogew0KICAgICAgICAgICAgICAidHlwZSIgOiAiaW50ZWdlciIsDQogICAgICAgICAgICAgICJkZXNjcmlwdGlvbiIgOiAiQWNjb3VudCBOdW1iZXIiDQogICAgICAgICAgICB9DQogICAgICAgICAgfSwNCiAgICAgICAgICAicmVxdWlyZWQiIDogWyAiYWNjb3VudE51bWJlciIsICJuYW1lIiBdDQogICAgICAgIH0NCiAgICAgIH0NCiAgICB9DQogIH0sDQogICJwYXJhbWV0ZXJzIiA6IHsNCiAgICAiWC1Db3JyZWxhdGlvbi1JRCIgOiB7DQogICAgICAibmFtZSIgOiAiWC1Db3JyZWxhdGlvbi1JRCIsDQogICAgICAiaW4iIDogImhlYWRlciIsDQogICAgICAiZGVzY3JpcHRpb24iIDogIkEgdmFsdWUgdXNlZCB0byBjb3JyZWxhdGUgYWxsIEFQSSB1c2FnZS4iLA0KICAgICAgInJlcXVpcmVkIiA6IGZhbHNlLA0KICAgICAgInR5cGUiIDogInN0cmluZyINCiAgICB9DQogIH0NCn0=        </byte>
+        <record name="MetaData" javaclass="com.wm.app.tn.profile.ProfileFieldMetaData">
+          <number name="GroupID" type="java.lang.Short">8</number>
+          <number name="MaxLength" type="java.lang.Integer">-1</number>
+          <idatacodable name="Extended?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">true</value>
+          </idatacodable>
+          <idatacodable name="Required?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <idatacodable name="Registration?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <null name="ValidValues"/>
+          <null name="DefaultValue"/>
+          <value name="Datatype">Binary</value>
+          <value name="Name">DestAuthentication</value>
+          <null name="Table"/>
+          <null name="Column"/>
+          <value name="Description">Authentication object.  This must match the authentication type from this same screen.  IS Flow delivery logic uses the type property to understand how to interpret this value.</value>
+          <value name="ProfileFieldID">540qna00e128dv7h000007en</value>
+          <idatacodable name="Displayable?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">true</value>
+          </idatacodable>
+          <null name="GroupName"/>
+        </record>
+        <value name="PartnerDisplayName">TestPartner</value>
+      </record>
+    </list>
+  </record>
+</IDataXMLCoder>

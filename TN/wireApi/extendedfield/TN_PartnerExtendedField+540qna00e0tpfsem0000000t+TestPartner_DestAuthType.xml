@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="version" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="major">9</value>
+      <value name="minor">0</value>
+    </record>
+    <list name="extflds">
+      <record javaclass="com.wm.app.tn.profile.ExtendedProfileField">
+        <value name="PartnerID">540qnc00caln12qv0000005b</value>
+        <value name="Value">Oauth</value>
+        <record name="MetaData" javaclass="com.wm.app.tn.profile.ProfileFieldMetaData">
+          <number name="GroupID" type="java.lang.Short">8</number>
+          <number name="MaxLength" type="java.lang.Integer">-1</number>
+          <idatacodable name="Extended?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">true</value>
+          </idatacodable>
+          <idatacodable name="Required?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <idatacodable name="Registration?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <idatacodable name="Deleted?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">false</value>
+          </idatacodable>
+          <value name="ValidValues">Basic|~~|Oauth|~~|APIKey|~~|JWT|~~|</value>
+          <value name="DefaultValue">Oauth</value>
+          <value name="Datatype">String</value>
+          <value name="Name">DestAuthType</value>
+          <null name="Table"/>
+          <null name="Column"/>
+          <value name="Description">Destination authorization type.  Valid values are Basic, Oauth, APIKey</value>
+          <value name="ProfileFieldID">540qna00e0tpfsem0000000t</value>
+          <idatacodable name="Displayable?" javaclass="com.wm.data.MBoolean">            <value name="MBoolean">true</value>
+          </idatacodable>
+          <null name="GroupName"/>
+        </record>
+        <value name="PartnerDisplayName">TestPartner</value>
+      </record>
+    </list>
+  </record>
+</IDataXMLCoder>
