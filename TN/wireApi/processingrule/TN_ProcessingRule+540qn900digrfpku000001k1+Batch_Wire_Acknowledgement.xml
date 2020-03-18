@@ -47,7 +47,7 @@
           <value name="LastChangeID">540qna00e0tpthq00000003e</value>
           <value name="LastChangeUser">Administrator</value>
           <value name="LastChangeSession">3f6d8d4294b14987b57349eff2449d73</value>
-          <number name="RuleIndex" type="java.lang.Integer">5</number>
+          <number name="RuleIndex" type="java.lang.Integer">15</number>
           <null name="SenderGroup"/>
           <null name="ReceiverGroup"/>
           <null name="SenderDisplayName"/>
