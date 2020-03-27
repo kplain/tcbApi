@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NirvanaRealm name="umserver" exportDate="2020-03-27-05:00" comment="Realm configuration from umserver" version="10.1" buildInfo="10.1.0.21.128782">
+    <RealmConfiguration>
+        <ConfigGroup name="Audit Settings">
+            <ConfigItem name="ChannelACL" value="true"/>
+            <ConfigItem name="ChannelFailure" value="true"/>
+            <ConfigItem name="ChannelMaintenance" value="false"/>
+            <ConfigItem name="ChannelSuccess" value="false"/>
+            <ConfigItem name="DataGroup" value="false"/>
+            <ConfigItem name="DataGroupFailure" value="false"/>
+            <ConfigItem name="DataStream" value="false"/>
+            <ConfigItem name="Group" value="true"/>
+            <ConfigItem name="GroupMembers" value="true"/>
+            <ConfigItem name="InterfaceManagement" value="true"/>
+            <ConfigItem name="JoinFailure" value="true"/>
+            <ConfigItem name="JoinMaintenance" value="true"/>
+            <ConfigItem name="JoinSuccess" value="false"/>
+            <ConfigItem name="QueueACL" value="true"/>
+            <ConfigItem name="QueueFailure" value="true"/>
+            <ConfigItem name="QueueMaintenance" value="false"/>
+            <ConfigItem name="QueueSuccess" value="false"/>
+            <ConfigItem name="RealmACL" value="true"/>
+            <ConfigItem name="RealmFailure" value="true"/>
+            <ConfigItem name="RealmMaintenance" value="true"/>
+            <ConfigItem name="RealmSuccess" value="false"/>
+            <ConfigItem name="SnoopStream" value="false"/>
+        </ConfigGroup>
+        <ConfigGroup name="Client Timeout Values">
+            <ConfigItem name="EventTimeout" value="60000"/>
+            <ConfigItem name="HighWaterMark" value="3000"/>
+            <ConfigItem name="LowWaterMark" value="1000"/>
+            <ConfigItem name="QueueAccessWaitLimit" value="200"/>
+            <ConfigItem name="QueueBlockLimit" value="500"/>
+            <ConfigItem name="QueuePushWaitLimit" value="200"/>
+            <ConfigItem name="TransactionLifeTime" value="20000"/>
+        </ConfigGroup>
+        <ConfigGroup name="Cluster Config">
+            <ConfigItem name="BufferSize" value="8192"/>
+            <ConfigItem name="ClientQueueSize" value="1000"/>
+            <ConfigItem name="ClientQueueWindow" value="100"/>
+            <ConfigItem name="ClientStateDelay" value="5000"/>
+            <ConfigItem name="DisableHTTPConnections" value="true"/>
+            <ConfigItem name="DisconnectWait" value="30000"/>
+            <ConfigItem name="DisconnectWhenNotReady" value="false"/>
+            <ConfigItem name="EnableSites" value="true"/>
+            <ConfigItem name="EnableStoreRecoveryRetry" value="true"/>
+            <ConfigItem name="EnginePipelineSize" value="2"/>
+            <ConfigItem name="FilterEventsDuringRecovery" value="true"/>
+            <ConfigItem name="FormationTimeout" value="120000"/>
+            <ConfigItem name="HeartBeatInterval" value="120000"/>
+            <ConfigItem name="InitialConnectionTimeout" value="30000"/>
+            <ConfigItem name="IsCommittedDelay" value="5000"/>
+            <ConfigItem name="MasterRequestTimeout" value="60000"/>
+            <ConfigItem name="MasterVoteDelay" value="10000"/>
+            <ConfigItem name="MasterWaitTimeout" value="10000"/>
+            <ConfigItem name="PublishQueueEnabled" value="true"/>
+            <ConfigItem name="QueueConsistencyCheck" value="false"/>
+            <ConfigItem name="QueueSize" value="1000"/>
+            <ConfigItem name="SecureHandshake" value="true"/>
+            <ConfigItem name="SeperateLog" value="false"/>
+            <ConfigItem name="StateChangeScan" value="60000"/>
+            <ConfigItem name="SyncPingSize" value="1000"/>
+            <ConfigItem name="TransactionSync" value="true"/>
+        </ConfigGroup>
+        <ConfigGroup name="Comet Config">
+            <ConfigItem name="BufferSize" value="5120"/>
+            <ConfigItem name="EnableLogging" value="false"/>
+            <ConfigItem name="Timeout" value="60000"/>
+        </ConfigGroup>
+        <ConfigGroup name="Connection Config">
+            <ConfigItem name="AllowBufferReuse" value="true"/>
+            <ConfigItem name="BufferManagerCount" value="16"/>
+            <ConfigItem name="BufferPoolSize" value="100"/>
+            <ConfigItem name="BufferQueueSize" value="100"/>
+            <ConfigItem name="BufferSize" value="102400"/>
+            <ConfigItem name="CometReadTimeout" value="20000"/>
+            <ConfigItem name="ConnectionDelay" value="60000"/>
+            <ConfigItem name="EnablePriorityMessaging" value="false"/>
+            <ConfigItem name="HandshakeTimeout" value="5000"/>
+            <ConfigItem name="IdleDriverTimeout" value="300000"/>
+            <ConfigItem name="IdleSessionTimeout" value="300000"/>
+            <ConfigItem name="KeepAlive" value="60000"/>
+            <ConfigItem name="MaxBufferSize" value="20971520"/>
+            <ConfigItem name="MaxBufferSizeClientSideCheck" value="true"/>
+            <ConfigItem name="MaxNoOfConnections" value="-1"/>
+            <ConfigItem name="MaxWriteCount" value="30"/>
+            <ConfigItem name="NIOSelectArray" value="false"/>
+            <ConfigItem name="NetworkMonitorThreads" value="4"/>
+            <ConfigItem name="PriorityQueueCount" value="10"/>
+            <ConfigItem name="PriorityReadSpinLockMaxConnections" value="2"/>
+            <ConfigItem name="PriorityReadSpinLockTime" value="500"/>
+            <ConfigItem name="PriorityReadType" value="1"/>
+            <ConfigItem name="QueueHighWaterMark" value="3000"/>
+            <ConfigItem name="QueueLowWaterMark" value="1000"/>
+            <ConfigItem name="ReadCount" value="10"/>
+            <ConfigItem name="UseDirectBuffering" value="true"/>
+            <ConfigItem name="WriteHandlerType" value="3"/>
+            <ConfigItem name="whEventThresholdCount" value="350"/>
+            <ConfigItem name="whEventThresholdTime" value="500"/>
+            <ConfigItem name="whMaxEventsBeforeFlush" value="100"/>
+            <ConfigItem name="whMaxEventsPerSecond" value="100000"/>
+            <ConfigItem name="whMaxTimeBetweenFlush" value="2"/>
+            <ConfigItem name="whPeakTrailDelay" value="1000"/>
+        </ConfigGroup>
+        <ConfigGroup name="Data Stream Config">
+            <ConfigItem name="FanoutTaskQueueSize" value="32"/>
+            <ConfigItem name="FanoutTraversalType" value="0"/>
+            <ConfigItem name="MaxSessionIdSize" value="14"/>
+            <ConfigItem name="MonitorTimer" value="10000"/>
+            <ConfigItem name="OffloadMulticastWrite" value="false"/>
+            <ConfigItem name="ParallelFanoutThreshold" value="50"/>
+            <ConfigItem name="SendInitialMapping" value="true"/>
+        </ConfigGroup>
+        <ConfigGroup name="DurableConfig">
+            <ConfigItem name="DurableNameFiltering" value="false"/>
+            <ConfigItem name="QueuedExtendedException" value="false"/>
+        </ConfigGroup>
+        <ConfigGroup name="Environment Config">
+            <ConfigItem name="AvailableProcessors" value="2"/>
+            <ConfigItem name="Embedded" value="false"/>
+            <ConfigItem name="InterRealmProtocolVersion" value="1"/>
+            <ConfigItem name="JavaVendor" value="Oracle Corporation"/>
+            <ConfigItem name="JavaVersion" value="1.8.0_181"/>
+            <ConfigItem name="NanosecondSupport" value="false"/>
+            <ConfigItem name="OSArchitecture" value="amd64"/>
+            <ConfigItem name="OSName" value="Windows Server 2012 R2"/>
+            <ConfigItem name="OSVersion" value="6.3"/>
+            <ConfigItem name="ProcessId" value="2284"/>
+            <ConfigItem name="ServerBuildDate" value="February 17 2020"/>
+            <ConfigItem name="ServerBuildNumber" value="Build 128782"/>
+            <ConfigItem name="ServerReleaseDetails" value="10.1.0.21.128782"/>
+            <ConfigItem name="ServerVersion" value="$Name: nirvana_10_1 $ - $Revision: 128782 $"/>
+            <ConfigItem name="TimerAdjustment" value="0"/>
+        </ConfigGroup>
+        <ConfigGroup name="Event Storage">
+            <ConfigItem name="ActiveDelay" value="1000"/>
+            <ConfigItem name="AutoDeleteScan" value="5000"/>
+            <ConfigItem name="AutoMaintainOnFileLimit" value="true"/>
+            <ConfigItem name="AutoMaintainSystemStores" value="true"/>
+            <ConfigItem name="AutoMaintenanceThreshold" value="50"/>
+            <ConfigItem name="CacheAge" value="60000"/>
+            <ConfigItem name="EnableBufferingKey" value="true"/>
+            <ConfigItem name="EnableStoreCaching" value="false"/>
+            <ConfigItem name="EnableStoreReadBuffering" value="true"/>
+            <ConfigItem name="IdleDelay" value="10000"/>
+            <ConfigItem name="JMSEngineAutoPurgeTime" value="5000"/>
+            <ConfigItem name="JMSEngineIndividualPurgeEnabled" value="false"/>
+            <ConfigItem name="MaintenanceFileSizeThreshold" value="104857600"/>
+            <ConfigItem name="MaintenanceMemoryThreshold" value="104857600"/>
+            <ConfigItem name="PageSize" value="5000"/>
+            <ConfigItem name="QueueDeliveryPersistencePolicy" value="1"/>
+            <ConfigItem name="StoreReadBufferSize" value="16384"/>
+            <ConfigItem name="SyncBatchSize" value="50"/>
+            <ConfigItem name="SyncServerFiles" value="false"/>
+            <ConfigItem name="SyncTimeLimit" value="20"/>
+            <ConfigItem name="ThreadPoolSize" value="4"/>
+        </ConfigGroup>
+        <ConfigGroup name="Fanout Values">
+            <ConfigItem name="ConnectionGrouping" value="true"/>
+            <ConfigItem name="DelayPublishOnCapacity" value="true"/>
+            <ConfigItem name="HonourSharedDurableCapacity" value="true"/>
+            <ConfigItem name="IteratorWindowSize" value="100"/>
+            <ConfigItem name="JMSQueueMaxMultiplier" value="10"/>
+            <ConfigItem name="MaximumDelayInWrite" value="1"/>
+            <ConfigItem name="ParallelBatchSize" value="50"/>
+            <ConfigItem name="ParallelThreadPoolSize" value="2"/>
+            <ConfigItem name="ParallelThreshold" value="1"/>
+            <ConfigItem name="ParallelUseGlobalPool" value="true"/>
+            <ConfigItem name="PeakPublishDelay" value="1"/>
+            <ConfigItem name="PublishDelay" value="1"/>
+            <ConfigItem name="PublishExpiredEvents" value="true"/>
+            <ConfigItem name="RoundRobinDelivery" value="false"/>
+            <ConfigItem name="SendEndOfChannelAlways" value="false"/>
+            <ConfigItem name="SendPubEventsImmediately" value="true"/>
+            <ConfigItem name="SyncQueueDelay" value="1000"/>
+            <ConfigItem name="SyncQueuePublisher" value="false"/>
+        </ConfigGroup>
+        <ConfigGroup name="Global Values">
+            <ConfigItem name="AllowRealmAdminFullAccess" value="true"/>
+            <ConfigItem name="CacheJoinInfoKeys" value="true"/>
+            <ConfigItem name="DisableExplicitGC" value="true"/>
+            <ConfigItem name="EnableCaching" value="false"/>
+            <ConfigItem name="EnableDNSLookups" value="true"/>
+            <ConfigItem name="EnableWeakReferenceCleanup" value="true"/>
+            <ConfigItem name="ExtendedMessageSelector" value="true"/>
+            <ConfigItem name="HTTPCookieSize" value="14"/>
+            <ConfigItem name="NHPScanTime" value="5000"/>
+            <ConfigItem name="NHPTimeout" value="120000"/>
+            <ConfigItem name="NanoDelayBase" value="1000000"/>
+            <ConfigItem name="OverrideEveryoneUser" value="false"/>
+            <ConfigItem name="PauseServerPublishing" value="false"/>
+            <ConfigItem name="SendRealmSummaryStats" value="false"/>
+            <ConfigItem name="ServerStateFlush" value="500"/>
+            <ConfigItem name="ServerTime" value="true"/>
+            <ConfigItem name="StampDictionary" value="true"/>
+            <ConfigItem name="StampHost" value="true"/>
+            <ConfigItem name="StampTime" value="true"/>
+            <ConfigItem name="StampTimeUseHPT" value="false"/>
+            <ConfigItem name="StampTimeUseHPTScale" value="0"/>
+            <ConfigItem name="StampUser" value="true"/>
+            <ConfigItem name="StatusBroadcast" value="5000"/>
+            <ConfigItem name="StatusUpdateTime" value="9223372036854775807"/>
+        </ConfigGroup>
+        <ConfigGroup name="Inter-Realm Comms Config">
+            <ConfigItem name="EstablishmentTime" value="30000"/>
+            <ConfigItem name="KeepAliveInterval" value="10000"/>
+            <ConfigItem name="KeepAliveResetTime" value="35000"/>
+            <ConfigItem name="MaximumReconnectTime" value="20000"/>
+            <ConfigItem name="MinimumReconnectTime" value="1000"/>
+            <ConfigItem name="Timeout" value="120000"/>
+            <ConfigItem name="WriteDelayOnFail" value="false"/>
+            <ConfigItem name="WriteDelayTimeout" value="30000"/>
+            <ConfigItem name="ZoneDefaultCanRecv" value="true"/>
+            <ConfigItem name="ZoneDefaultCanSend" value="true"/>
+        </ConfigGroup>
+        <ConfigGroup name="JVM Management">
+            <ConfigItem name="AutoThreadDumpOnExit" value="true"/>
+            <ConfigItem name="EmergencyThreshold" value="94"/>
+            <ConfigItem name="EnableJMX" value="false"/>
+            <ConfigItem name="ExitOnDiskIOError" value="true"/>
+            <ConfigItem name="ExitOnInterfaceFailure" value="false"/>
+            <ConfigItem name="ExitOnMemoryError" value="true"/>
+            <ConfigItem name="IORetryCount" value="10"/>
+            <ConfigItem name="IOSleepTime" value="500"/>
+            <ConfigItem name="JMXRMIServerURLString" value="service:jmx:rmi:///jndi/rmi://localhost:9999/server"/>
+            <ConfigItem name="MemoryMonitoring" value="2000"/>
+            <ConfigItem name="ThrottleAllPublishersAtThreshold" value="true"/>
+            <ConfigItem name="WarningThreshold" value="85"/>
+        </ConfigGroup>
+        <ConfigGroup name="Join Config">
+            <ConfigItem name="ActiveThreadPoolSize" value="2"/>
+            <ConfigItem name="IdleThreadPoolSize" value="1"/>
+            <ConfigItem name="MaxEventsPerSchedule" value="50"/>
+            <ConfigItem name="MaxQueueSizeToUse" value="100"/>
+            <ConfigItem name="RemoteJoinAckBatchSize" value="10"/>
+            <ConfigItem name="RemoteJoinAckInterval" value="100"/>
+            <ConfigItem name="UseQueuedLocalJoinHandler" value="false"/>
+        </ConfigGroup>
+        <ConfigGroup name="Logging Config">
+            <ConfigItem name="DefaultLogSize" value="100000000"/>
+            <ConfigItem name="DiagnosticsEnabledStores" value="!"/>
+            <ConfigItem name="DisplayCurrentThread" value="true"/>
+            <ConfigItem name="DisplayPackageName" value="true"/>
+            <ConfigItem name="EmbedTag" value="false"/>
+            <ConfigItem name="EnableLog4J" value="false"/>
+            <ConfigItem name="EnableStatusLog" value="true"/>
+            <ConfigItem name="LogManager" value="1"/>
+            <ConfigItem name="RolledLogFileDepth" value="10"/>
+            <ConfigItem name="customDebugTag" value="Debug"/>
+            <ConfigItem name="customErrorTag" value="Error"/>
+            <ConfigItem name="customFatalTag" value="Fatal"/>
+            <ConfigItem name="customInfoTag" value="Info"/>
+            <ConfigItem name="customLogTag" value="Log"/>
+            <ConfigItem name="customTraceTag" value="Trace"/>
+            <ConfigItem name="customWarnTag" value="Warn"/>
+            <ConfigItem name="fLoggerLevel" value="4"/>
+        </ConfigGroup>
+        <ConfigGroup name="Metric Config">
+            <ConfigItem name="EnableEventMemoryMonitoring" value="true"/>
+            <ConfigItem name="EnableMetrics" value="true"/>
+        </ConfigGroup>
+        <ConfigGroup name="Plugin Config">
+            <ConfigItem name="EnableAccessLog" value="true"/>
+            <ConfigItem name="EnableErrorLog" value="true"/>
+            <ConfigItem name="EnablePluginLog" value="true"/>
+            <ConfigItem name="MaxNumberOfPluginThreads" value="200"/>
+            <ConfigItem name="PluginTimeout" value="30000"/>
+        </ConfigGroup>
+        <ConfigGroup name="Protobuf Config">
+            <ConfigItem name="CacheEventFilter" value="true"/>
+            <ConfigItem name="FilterProtobufEvents" value="true"/>
+            <ConfigItem name="MaximumProtobufBuilders" value="4"/>
+            <ConfigItem name="MinimumProtobufBuilders" value="2"/>
+            <ConfigItem name="ProtobufDescriptorsInputDir" value="C:\SoftwareAG\nirvana\server\nirvana/plugins/ProtobufDescriptors"/>
+            <ConfigItem name="ProtobufDescriptorsOutputDir" value="C:\SoftwareAG\nirvana\server\nirvana/plugins/htdocs/"/>
+            <ConfigItem name="UpdateDescriptorsInterval" value="60000"/>
+            <ConfigItem name="useChannelLevelProtobufCache" value="true"/>
+        </ConfigGroup>
+        <ConfigGroup name="Protocol AMQP Config">
+            <ConfigItem name="AllowUserTransformation" value="false"/>
+            <ConfigItem name="AnonymousUser" value="anonymous_amqp"/>
+            <ConfigItem name="BufferSize" value="10240"/>
+            <ConfigItem name="DefaultNodeMode" value="0"/>
+            <ConfigItem name="Enable" value="false"/>
+            <ConfigItem name="EnableWriteThread" value="false"/>
+            <ConfigItem name="EngineLoopCount" value="50"/>
+            <ConfigItem name="MaxFrameSize" value="10000000"/>
+            <ConfigItem name="MaxThreadPoolSize" value="10"/>
+            <ConfigItem name="MinThreadPoolSize" value="1"/>
+            <ConfigItem name="QueuePrefix" value="queue://"/>
+            <ConfigItem name="SASL_Anonymous" value="true"/>
+            <ConfigItem name="SASL_CRAM-MD5" value="false"/>
+            <ConfigItem name="SASL_DIGEST-MD5" value="false"/>
+            <ConfigItem name="SASL_Plain" value="false"/>
+            <ConfigItem name="SubscriberCredit" value="1000"/>
+            <ConfigItem name="Timeout" value="60000"/>
+            <ConfigItem name="TopicPrefix" value="topic://"/>
+            <ConfigItem name="TransformToUse" value="2"/>
+        </ConfigGroup>
+        <ConfigGroup name="Protocol MQTT Config">
+            <ConfigItem name="DisconnectClientsOnPublishFailure" value="true"/>
+            <ConfigItem name="DisconnectOnSecurityException" value="true"/>
+            <ConfigItem name="Enable" value="false"/>
+            <ConfigItem name="EnableAutoCreateTopics" value="true"/>
+            <ConfigItem name="EnforceAlphaNumericClientID" value="false"/>
+            <ConfigItem name="IgnoreClientIDLength" value="true"/>
+            <ConfigItem name="MaxOutstanding" value="64000"/>
+            <ConfigItem name="QoS0AsTransient" value="false"/>
+            <ConfigItem name="SessionStateTTL" value="259200000"/>
+            <ConfigItem name="Strict" value="true"/>
+            <ConfigItem name="SupportZeroLength" value="true"/>
+            <ConfigItem name="Timeout" value="5000"/>
+        </ConfigGroup>
+        <ConfigGroup name="Proxy Forward Config">
+            <ConfigItem name="BufferSize" value="10240"/>
+            <ConfigItem name="FlushTimeout" value="120000"/>
+        </ConfigGroup>
+        <ConfigGroup name="RecoveryDaemon">
+            <ConfigItem name="EventsPerBlock" value="500"/>
+            <ConfigItem name="ThreadPool" value="4"/>
+        </ConfigGroup>
+        <ConfigGroup name="Server Protection">
+            <ConfigItem name="EnableFlowControl" value="true"/>
+            <ConfigItem name="FlowControlWaitTimeOne" value="16000"/>
+            <ConfigItem name="FlowControlWaitTimeThree" value="10000"/>
+            <ConfigItem name="FlowControlWaitTimeTwo" value="13332"/>
+        </ConfigGroup>
+        <ConfigGroup name="Thread Pool Config">
+            <ConfigItem name="CommonPoolThreadSize" value="5"/>
+            <ConfigItem name="ConnectionThreadPoolMaxSize" value="10"/>
+            <ConfigItem name="ConnectionThreadPoolMinSize" value="4"/>
+            <ConfigItem name="ConnectionThreadWaitTime" value="120000"/>
+            <ConfigItem name="EnableConnectionThreadPooling" value="true"/>
+            <ConfigItem name="MaxUnauthorisedCount" value="1000"/>
+            <ConfigItem name="ReadThreadPoolMaxSize" value="100"/>
+            <ConfigItem name="ReadThreadPoolMinSize" value="4"/>
+            <ConfigItem name="SchedulerPoolSize" value="2"/>
+            <ConfigItem name="ThreadIdleQueueSize" value="10"/>
+            <ConfigItem name="WriteThreadPoolMaxSize" value="1000"/>
+            <ConfigItem name="WriteThreadPoolMinSize" value="5"/>
+        </ConfigGroup>
+        <ConfigGroup name="TransactionManager">
+            <ConfigItem name="MaxEventsPerTransaction" value="0"/>
+            <ConfigItem name="MaxTransactionTime" value="300000"/>
+            <ConfigItem name="TTLThreshold" value="1000"/>
+        </ConfigGroup>
+    </RealmConfiguration>
+    <RealmPermissionSet>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="0:0:0:0:0:0:0:1" name="rldiunmas1$"/>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="127.0.0.1" name="rldiunmas1$"/>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="rldiunmas1.tcbna.net" name="rldiunmas1$"/>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="0:0:0:0:0:0:0:1" name="s_webmethods_dev"/>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="127.0.0.1" name="s_webmethods_dev"/>
+        <RealmACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" host="rldiunmas1.tcbna.net" name="s_webmethods_dev"/>
+        <RealmGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" connectToRealm="true" changeRealmConfig="false" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="false" useAdminAPI="false" manageDatagroups="false" publishDatagroups="false" ownDatagroups="false" groupname="Everyone"/>
+        <RealmGroupACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" connectToRealm="true" changeRealmConfig="true" addremoveChannels="true" addremoveJoins="true" addremoveRealms="true" overrideConnectionCount="true" useAdminAPI="true" manageDatagroups="true" publishDatagroups="true" ownDatagroups="true" groupname="umAdmins"/>
+    </RealmPermissionSet>
+    <ChannelSet>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="UniversalLoggingFrameworkTopic" TTL="0" capacity="0" EID="2932511" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+                <ChannelGroupACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="true" groupname="umAdmins"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="UniversalLoggingFrameworkSubscriber" EID="2932507" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/naming/defaultContext" TTL="0" capacity="0" EID="2" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <ChannelKeySet>
+                <ChannelKeyEntry keyName="alias" keyDepth="1"/>
+            </ChannelKeySet>
+            <EventsSet>
+                <Event id="0">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1513981176869"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="127.0.0.1"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="b_suvadl"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="JMS_my-channels_EnableMultiplexedConnections" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_RandomRNames" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_RetryCommit" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ConxExceptionOnRetryFailure" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_MaxReconnectAttempts" type="Integer" value="-1"/>
+                        <EventProp name="JMS_my-channels_EnableSharedDurable" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_EnableSerialDurable" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SharedDurableType" type="String" value="SharedQueued"/>
+                        <EventProp name="JMS_my-channels_EnableSingleSharedDurableAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableSingleQueueAck" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_EnableDurablePriority" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncWritesToDisc" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_SyncSendPersistent" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_InitialConnectionRetryCount" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncBatchSize" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_SyncTime" type="Integer" value="20"/>
+                        <EventProp name="JMS_my-channels_GlobalStoreCapacity" type="Integer" value="0"/>
+                        <EventProp name="JMS_my-channels_AutoAckCount" type="Integer" value="50"/>
+                        <EventProp name="JMS_my-channels_WindowSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_useInfiniteWindowSize" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_UnAckedSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_RedliveredSize" type="Integer" value="100"/>
+                        <EventProp name="JMS_my-channels_ThreadPoolSize" type="Integer" value="30"/>
+                        <EventProp name="JMS_my-channels_AutoReconnectAfterACL" type="Boolean" value="false"/>
+                        <EventProp name="JMS_my-channels_ImmediateReconnect" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ReconnectInterval" type="Long" value="2000"/>
+                        <EventProp name="JMS_my-channels_UseJMSEngine" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_DisconnectAfterClusterFailure" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_ConnectionTimeout" type="Long" value="10000"/>
+                        <EventProp name="JMS_my-channels_PermittedKeepAlivesMissed" type="Integer" value="2"/>
+                        <EventProp name="JMS_my-channels_SyncNamedTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AdapterBuffer" type="Integer" value="1310720"/>
+                        <EventProp name="JMS_my-channels_WriteHandler" type="Integer" value="3"/>
+                        <EventProp name="JMS_my-channels_SyncQueueAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_SyncTopicAcks" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_AutoCreateResource" type="Boolean" value="true"/>
+                        <EventProp name="JMS_my-channels_FollowMaster" type="Boolean" value="false"/>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="UniversalLoggingFrameworkTopicFactory"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.ConnectionFactory"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.ConnectionFactoryFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value="{&quot;JMS_my-channels_EnableMultiplexedConnections&quot;:[3,true],&quot;JMS_my-channels_RandomRNames&quot;:[3,false],&quot;JMS_my-channels_RetryCommit&quot;:[3,false],&quot;JMS_my-channels_ConxExceptionOnRetryFailure&quot;:[3,false],&quot;JMS_my-channels_MaxReconnectAttempts&quot;:[4,-1],&quot;JMS_my-channels_EnableSharedDurable&quot;:[3,true],&quot;JMS_my-channels_EnableSerialDurable&quot;:[3,false],&quot;JMS_my-channels_SharedDurableType&quot;:[0,&quot;SharedQueued&quot;],&quot;JMS_my-channels_EnableSingleSharedDurableAck&quot;:[3,false],&quot;JMS_my-channels_EnableSingleQueueAck&quot;:[3,false],&quot;JMS_my-channels_EnableDurablePriority&quot;:[3,false],&quot;JMS_my-channels_SyncWritesToDisc&quot;:[3,false],&quot;JMS_my-channels_SyncSendPersistent&quot;:[3,false],&quot;JMS_my-channels_InitialConnectionRetryCount&quot;:[4,2],&quot;JMS_my-channels_SyncBatchSize&quot;:[4,50],&quot;JMS_my-channels_SyncTime&quot;:[4,20],&quot;JMS_my-channels_GlobalStoreCapacity&quot;:[4,0],&quot;JMS_my-channels_AutoAckCount&quot;:[4,50],&quot;JMS_my-channels_WindowSize&quot;:[4,100],&quot;JMS_my-channels_useInfiniteWindowSize&quot;:[3,false],&quot;JMS_my-channels_UnAckedSize&quot;:[4,100],&quot;JMS_my-channels_RedliveredSize&quot;:[4,100],&quot;JMS_my-channels_ThreadPoolSize&quot;:[4,30],&quot;JMS_my-channels_AutoReconnectAfterACL&quot;:[3,false],&quot;JMS_my-channels_ImmediateReconnect&quot;:[3,true],&quot;JMS_my-channels_ReconnectInterval&quot;:[1,2000],&quot;JMS_my-channels_UseJMSEngine&quot;:[3,true],&quot;JMS_my-channels_DisconnectAfterClusterFailure&quot;:[3,true],&quot;JMS_my-channels_ConnectionTimeout&quot;:[1,10000],&quot;JMS_my-channels_PermittedKeepAlivesMissed&quot;:[4,2],&quot;JMS_my-channels_SyncNamedTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AdapterBuffer&quot;:[4,1310720],&quot;JMS_my-channels_WriteHandler&quot;:[4,3],&quot;JMS_my-channels_SyncQueueAcks&quot;:[3,true],&quot;JMS_my-channels_SyncTopicAcks&quot;:[3,true],&quot;JMS_my-channels_AutoCreateResource&quot;:[3,true],&quot;JMS_my-channels_FollowMaster&quot;:[3,false]}"/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="ConnectionFactory"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="nsp://RLDIUNMAS1:9000/"/>
+                    </EventPropSet>
+                    <EventData>VW5pdmVyc2FsTG9nZ2luZ0ZyYW1ld29ya1RvcGljRmFjdG9yeQ==</EventData>
+                </Event>
+                <Event id="1">
+                    <EventAttribSet>
+                        <EventAttrib name="nrvpub.time" type="Long" value="1513981295694"/>
+                        <EventAttrib name="nrvpub.host" type="String" value="127.0.0.1"/>
+                        <EventAttrib name="nrvpub.name" type="String" value="b_suvadl"/>
+                        <EventAttrib name="JMSDeliveryMode" type="String" value="PERSISTENT"/>
+                        <EventAttrib name="JMSPriority" type="Byte" value="4"/>
+                    </EventAttribSet>
+                    <EventPropSet>
+                        <EventProp name="alias.type" type="Integer" value="1"/>
+                        <EventProp name="alias" type="String" value="UniversalLoggingFrameworkTopic"/>
+                        <EventProp name="alias.reference.classname" type="String" value="javax.jms.Topic"/>
+                        <EventProp name="alias.reference.factoryclass" type="String" value="com.pcbsys.nirvana.nJMS.TopicFactory"/>
+                        <EventProp name="alias.reference.url" type="String" value=""/>
+                        <EventProp name="alias.stringRefAddr.type" type="String" value="Topic"/>
+                        <EventProp name="alias.stringRefAddr.addr" type="String" value="UniversalLoggingFrameworkTopic"/>
+                    </EventPropSet>
+                    <EventData>VW5pdmVyc2FsTG9nZ2luZ0ZyYW1ld29ya1RvcGlj</EventData>
+                </Event>
+            </EventsSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/10_64_106_230_5555_1513723136_DEVESB__RequestReplyClient" TTL="0" capacity="0" EID="506" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/10_64_106_230_5555_1513723136_J_jRQtEolDEurgAVIwwwADXaZQs__RequestReplyClient" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/10_64_106_231_5555_1513872629_J_jRQtEolDEurgAVIwwwADXaZQs__RequestReplyClient" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbAchExport/documentTypes/achBatchEntryDoc" TTL="0" capacity="0" EID="17557" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbEscrow__triggers__processAchBatchEntries" EID="17557" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbBnssReportTransferController/documentTypes/ifxAccountRequestPublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbBnssReportTransferController__triggers__getAccountRequest" EID="0" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbBnssReportTransferController/documentTypes/ifxAccountResponsePublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbBnssReportTransferController/documentTypes/ifxTransactionRequestPublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbBnssReportTransferController__triggers__getTransactionRequest" EID="0" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbBnssReportTransferController/documentTypes/ifxTransactionResponsePublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbCheckProcessing/documentTypes/billingReportDoc" TTL="0" capacity="0" EID="16" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbCheckProcessing__triggers__storeBillingDetails" EID="16" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbCustomerDataExchange/documentTypes/subscriptionPublishableDoc" TTL="0" capacity="0" EID="14251" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbCustomerDataExchange__triggers__getBaiData" EID="14251" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbCustomerDataExchange/documentTypes/transmissionStatusPublishableDoc" TTL="0" capacity="0" EID="14048" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbCustomerDataExchange__triggers__updateTransmission" EID="14048" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbCustomerDataExchangeModel/wrapper/jdbc/adapters/bnssReportingDb/isDataWarehouseReadyPublishDocument" TTL="0" capacity="0" EID="152757" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbCustomerDataExchange__triggers__pollBaiSubscriptions" EID="152757" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbDeposits/documentTypes/ifxAccountRequestPublishableDoc" TTL="0" capacity="0" EID="277" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbDeposits__triggers__getAccountRequest" EID="277" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbDeposits/documentTypes/ifxAccountResponsePublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbDeposits/documentTypes/ifxTransactionRequestPublishableDoc" TTL="0" capacity="0" EID="227" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbDeposits__triggers__getTransactionRequest" EID="227" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbDeposits/documentTypes/ifxTransactionResponsePublishableDoc" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbFiservCommunicatorHttp/documentTypes/bankServices/requestGetTransactions" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##TcbFiservCommunicatorHttp__trigger__getTransactions" EID="0" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbFiservCommunicatorHttp__trigger__getTransactions" EID="0" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbFiservCommunicatorHttp/documentTypes/bankServices/responseGetTransactions" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbIndexRates/documentTypes/indexRatesPublishableDoc" TTL="0" capacity="0" EID="35" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbEscrow__triggers__processIndexRates" EID="35" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbNotificationController/documentTypes/notificationPublishableDoc" TTL="0" capacity="0" EID="3013" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##TcbNotificationController__triggers__emailNotificationTrigger" EID="49" outstandingEvents="2964" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbNotificationController__triggers__emailNotificationTrigger" EID="3013" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbSalesforce/documentTypes/onboardingCanonical" TTL="0" capacity="0" EID="13" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbChargeback__triggers__subscribeChargeback" EID="13" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbChargeback__triggers__subscribeSpecialInstructions" EID="13" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/documentTypes/canonical/canonicalWireDoc" TTL="0" capacity="0" EID="2182" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__common__origination__getWireOrigination" EID="2182" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/documentTypes/canonical/canonicalWireErrorDoc" TTL="0" capacity="0" EID="23" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbEscrow__triggers__getWireFrameworkError" EID="23" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbBatchWires__triggers__wireFrameworkError__getWireFrameworkError" EID="23" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbCorrespondentLendingWires__triggers__processCLWireErrorResponse" EID="23" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/documentTypes/canonical/canonicalWireResponseDoc" TTL="0" capacity="0" EID="4576" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbEscrow__triggers__processEscrowOutboundWireResponse" EID="4576" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbCorrespondentLendingWires__triggers__processCLWireResponse" EID="4576" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+                <durableEntry name="DEVESB_##TcbBatchWires__triggers__wireResponse__getWireResponse" EID="4576" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/batch/generalResponse/notifyGeneralResponsePublishDocument" TTL="0" capacity="0" EID="40" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__batch__generalResponse__getGeneralResponse" EID="40" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/batch/notification/notifyNotificationPublishDocument" TTL="0" capacity="0" EID="39" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__batch__notification__getNotification" EID="39" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/correspondentLending/generalResponse/notifyGeneralResponsePublishDocument" TTL="0" capacity="0" EID="2133" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__correspondentLending__generalResponse__getGeneralResponse" EID="2133" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/correspondentLending/notification/notifyNotificationPublishDocument" TTL="0" capacity="0" EID="2144" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__correspondentLending__notification__getNotification" EID="2144" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/escrow/generalResponse/notifyGeneralResponsePublishDocument" TTL="0" capacity="0" EID="165" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__escrow__generalResponse__getGeneralResponse" EID="165" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/TcbWires/triggers/escrow/notification/notifyNotificationPublishDocument" TTL="0" capacity="0" EID="76" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas2" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##TcbWires__triggers__escrow__notification__getNotification" EID="76" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/Test/Pub_Sub/publishableDocument" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##Test__Pub_Sub__tiggerTest" EID="0" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="false" queued="false" shared="true" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/pub/publish/notification/error" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/EDIINT/InSitu/processNotification" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/b2b/editn/rec/batchFailRecord" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/fin/doc/FINInboundMessage" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__fin__trp__FINInboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="DEVESB_##wm__fin__trp__FINInboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/fin/doc/FINOutboundMessage" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="DEVESB_##wm__fin__transport__MQSeries__MQSeriesPutTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__casmf__trp__CASmfOutboundTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__fin__transport__AFT__AFTOutboundTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="DEVESB_##wm__fin__transport__AFT__AFTOutboundTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__fin__transport__MQSeries__MQSeriesPutTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="DEVESB_##wm__casmf__trp__CASmfOutboundTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__fin__transport__Test__FINSampleOutboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="DEVESB_##wm__fin__transport__Test__FINSampleOutboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/fin/transport/Test/FINSampleInboundMessage" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+            <DurableSet>
+                <durableEntry name="J_jRQtEolDEurgAVIwwwADXaZQs_##wm__fin__transport__Test__FINSampleInboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+                <durableEntry name="DEVESB_##wm__fin__transport__Test__FINSampleInboundMessageTrigger" EID="-1" outstandingEvents="0" clusterWide="false" persistent="true" priorityEnabled="true" queued="false" shared="false" serial="false"/>
+            </DurableSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/monitor/process/DeleteModelMetadata" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/tn/rec/TaskDbUpdate" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="/wm/is/wm/tn/rec/TaskFailure" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <ChannelPermissionSet>
+                <ChannelACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="true" getLastEID="false" purgeEvents="false" subscribe="false" publish="false" useNamedSubcription="false" host="*" name="*"/>
+                <ChannelACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" getLastEID="true" purgeEvents="true" subscribe="true" publish="true" useNamedSubcription="false" host="rldiesbas1" name="s_webmethods_dev"/>
+                <ChannelGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" getLastEID="true" purgeEvents="false" subscribe="true" publish="false" useNamedSubcription="true" groupname="Everyone"/>
+            </ChannelPermissionSet>
+        </ChannelEntry>
+    </ChannelSet>
+    <QueueSet>
+        <QueueEntry>
+            <ChannelAttributesEntry name="/temp/queuecfe600000000" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <QueuePermissionSet>
+                <QueueACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" purge="true" peek="true" push="true" pop="true" host="rldiesbas2" name="s_webmethods_dev"/>
+                <QueueGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" purge="false" peek="true" push="false" pop="false" groupname="Everyone"/>
+            </QueuePermissionSet>
+        </QueueEntry>
+        <QueueEntry>
+            <ChannelAttributesEntry name="/temp/queuecfe900000000" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="false" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry HonorCapacityWhenFull="true" SyncOnEachWrite="false" SyncMaxBatchSize="0" SyncBatchTime="0" PerformAutomaticMaintenance="true" EnableCaching="true" CacheOnReload="true" EnableReadBuffering="true" ReadBufferSize="10240" Priority="4" EnableMulticast="false" MultiFileEventsPerSpindle="50000" StampDictionary="0"/>
+            <QueuePermissionSet>
+                <QueueACLEntry listACLEntries="true" modifyACLEntries="true" fullControl="true" purge="true" peek="true" push="true" pop="true" host="rldiesbas1" name="s_webmethods_dev"/>
+                <QueueGroupACLEntry listACLEntries="false" modifyACLEntries="false" fullControl="false" purge="false" peek="true" push="false" pop="false" groupname="Everyone"/>
+            </QueuePermissionSet>
+        </QueueEntry>
+    </QueueSet>
+    <DataGroupSet/>
+    <RealmInterfaces>
+        <RealmNHPInterface>
+            <RealmInterface name="nhp0" port="9000" adapter="0.0.0.0" autostart="true" advertise="true" authtime="10000" backlog="100" acceptThreads="2" sendbuffersize="1310720" receivebuffersize="1310720" allowforinterrealm="true" allowclientconnections="true" EnableNIO="true"/>
+            <RealmInterfacePlugin mountPoint="/" name="File Plugin">
+                <NirvanaFilePlugin>
+                    <PluginConfigEntry name="AddUserAsCookie" value="" description=""/>
+                    <PluginConfigEntry name="AuthParameters" value="" description=""/>
+                    <PluginConfigEntry name="Authenticator" value="" description=""/>
+                    <PluginConfigEntry name="BasePath" value="C:\SoftwareAG\UniversalMessaging/doc" description=""/>
+                    <PluginConfigEntry name="BufferSize" value="" description=""/>
+                    <PluginConfigEntry name="Cache-Control" value="" description=""/>
+                    <PluginConfigEntry name="CacheObjectSize" value="" description=""/>
+                    <PluginConfigEntry name="CachedObjects" value="" description=""/>
+                    <PluginConfigEntry name="DefaultName" value="index.html" description=""/>
+                    <PluginConfigEntry name="EnableURLRewrite" value="" description=""/>
+                    <PluginConfigEntry name="FileNotFoundPage" value="" description=""/>
+                    <PluginConfigEntry name="GroupNames" value="" description=""/>
+                    <PluginConfigEntry name="MimeType" value="" description=""/>
+                    <PluginConfigEntry name="ReloadUserFileDynamically" value="" description=""/>
+                    <PluginConfigEntry name="RoleNames" value="" description=""/>
+                    <PluginConfigEntry name="Security Realm" value="" description=""/>
+                    <PluginConfigEntry name="SeparateAccessandErrorLogs" value="" description=""/>
+                </NirvanaFilePlugin>
+            </RealmInterfacePlugin>
+            <RealmInterfacePlugin mountPoint="/lib/js" name="File Plugin">
+                <NirvanaFilePlugin>
+                    <PluginConfigEntry name="AddUserAsCookie" value="" description=""/>
+                    <PluginConfigEntry name="AuthParameters" value="" description=""/>
+                    <PluginConfigEntry name="Authenticator" value="" description=""/>
+                    <PluginConfigEntry name="BasePath" value="C:\SoftwareAG\UniversalMessaging/javascript/lib" description=""/>
+                    <PluginConfigEntry name="BufferSize" value="" description=""/>
+                    <PluginConfigEntry name="Cache-Control" value="" description=""/>
+                    <PluginConfigEntry name="CacheObjectSize" value="" description=""/>
+                    <PluginConfigEntry name="CachedObjects" value="" description=""/>
+                    <PluginConfigEntry name="DefaultName" value="index.html" description=""/>
+                    <PluginConfigEntry name="EnableURLRewrite" value="" description=""/>
+                    <PluginConfigEntry name="FileNotFoundPage" value="" description=""/>
+                    <PluginConfigEntry name="GroupNames" value="" description=""/>
+                    <PluginConfigEntry name="MimeType" value="" description=""/>
+                    <PluginConfigEntry name="ReloadUserFileDynamically" value="" description=""/>
+                    <PluginConfigEntry name="RoleNames" value="" description=""/>
+                    <PluginConfigEntry name="Security Realm" value="" description=""/>
+                    <PluginConfigEntry name="SeparateAccessandErrorLogs" value="" description=""/>
+                </NirvanaFilePlugin>
+            </RealmInterfacePlugin>
+            <JavascriptConfigEntry CORSAllowedOrigins="*" EnableJavaScript="true" EnableWebSockets="true" CORSAllowCredentials="true" EnableGZipLP="true" MinimumBytesBeforeGZIP="1000" AjaxLPIdleDelay="60000" AjaxLPActiveDelay="100"/>
+        </RealmNHPInterface>
+    </RealmInterfaces>
+    <RealmSecurityGroupSet>
+        <RealmSecurityGroup>
+            <RealmSecurityGroupEntry groupname="umAdmins"/>
+            <SecurityGroupSubjectEntry host="*" name="s_webmethods_dev"/>
+            <SecurityGroupSubjectEntry host="*" name="b_gasury"/>
+            <SecurityGroupSubjectEntry host="*" name="b_bebagh"/>
+            <SecurityGroupSubjectEntry host="*" name="b_rishri"/>
+            <SecurityGroupSubjectEntry host="*" name="b_dutabo"/>
+            <SecurityGroupSubjectEntry host="*" name="kaplai"/>
+            <SecurityGroupSubjectEntry host="*" name="administrator"/>
+            <SecurityGroupSubjectEntry host="*" name="b_nopran"/>
+        </RealmSecurityGroup>
+    </RealmSecurityGroupSet>
+</NirvanaRealm>
