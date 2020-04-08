@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.1" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
-    <buildInfo name="BuildTimestamp" value="2020-01-22T14:31:07"/>
+    <buildInfo name="BuildTimestamp" value="2020-04-08T12:17:21"/>
     <asset name="API.c032c102-0a64-439e-9b43-d85d2b392de8" displayName="AccountTransactions[1.0]" isDeployable="true">
         <implementation.generic type="API"/>
         <dependsOn>APIGateway:Policy.83cf15ba-19c3-4604-bce6-fa5eaaa4c691</dependsOn>
@@ -38,7 +38,6 @@
             <value>false</value>
         </property>
     </asset>
-    
     <asset name="PolicyAction.a12a069e-61fe-4d06-ab43-080f80f6e25a" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API AccountTransactions[1.0]" isDeployable="true">
         <implementation.generic type="PolicyAction"/>
     </asset>
