@@ -1,0 +1,15 @@
+{
+  "type" : "endpoint",
+  "id" : "1323e4e3-952c-449b-ac21-f1ba19cfd6f3",
+  "name" : "ESBURL",
+  "description" : "Base ESB URL address",
+  "type" : "endpoint",
+  "endPointURI" : "https://rldiesbts2.tcbna.net:5557",
+  "connectionTimeout" : 600,
+  "readTimeout" : 600,
+  "suspendDurationOnFailure" : 0,
+  "optimizationTechnique" : "None",
+  "passSecurityHeaders" : false,
+  "keystoreAlias" : "DEFAULT_IS_KEYSTORE",
+  "keyAlias" : "ssos"
+}
