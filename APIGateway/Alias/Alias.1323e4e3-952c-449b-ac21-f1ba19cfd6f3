@@ -4,7 +4,7 @@
   "name" : "ESBURL",
   "description" : "Base ESB URL address",
   "type" : "endpoint",
-  "endPointURI" : "https://rldiesbts2.tcbna.net:5557",
+  "endPointURI" : "https://rldiesbts2.tcbna.net:15557",
   "connectionTimeout" : 600,
   "readTimeout" : 600,
   "suspendDurationOnFailure" : 0,
