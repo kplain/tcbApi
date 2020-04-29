@@ -23,7 +23,7 @@
   </DeploymentSet>
   <DeploymentSet allowEmptyValues="false" assetCompositeName="APIGatewayAssets" deploymentSetName="apiDeploymentSet" serverAliasName="TcbApiRepo" targetServerName="DEVGateway" targetServerType="APIGateway">
     <Component name="Alias.1323e4e3-952c-449b-ac21-f1ba19cfd6f3" type="Alias">
-      <Property propertyName="Endpoint URI for Endpoint alias ESBURL" propertyValue="https://rldiesbts2.tcbna.net:55571"/>
+      <Property propertyName="Endpoint URI for Endpoint alias ESBURL" propertyValue="https://rldiesbts2.tcbna.net:15557"/>
       <Property propertyName="Optimization technique for Endpoint alias ESBURL" propertyValue="None"/>
       <Property propertyName="Keystore alias for Endpoint alias ESBURL" propertyValue="DEFAULT_IS_KEYSTORE"/>
       <Property propertyName="Key alias for Endpoint alias ESBURL" propertyValue="ssos"/>
